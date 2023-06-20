@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "a+PjFyPuvtuGwwU2w/nxUgQwuW5AUuqDUmCJhDITgvAFNpz4hm5qNWPyH6U0skhROTSAd4THMUDQ/gGjxs7nAw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\1dang\\YandexDisk\\ideas\\c#\\parsing\\parser\\parser.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\1dang\\.nuget\\packages\\anglesharp\\1.0.3\\anglesharp.1.0.3.nupkg.sha512",
+    "C:\\Users\\1dang\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
+    "C:\\Users\\1dang\\.nuget\\packages\\system.text.encoding.codepages\\7.0.0\\system.text.encoding.codepages.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
