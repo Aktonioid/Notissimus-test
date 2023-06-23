@@ -67,12 +67,21 @@ namespace parser
                 Delimiter = " ;"
             };
 
-           
-            using(var writer = new StreamWriter(name+".csv", true))
+            var list =  new List<T>();
+
+            using(var reader = new StreamReader(name+".csv"))
+            using(var csvReader = new CsvReader(reader,csvConfig))
+            {
+                csvReader.Context.RegisterClassMap<TMap>();
+                var rows = csvReader.GetRecords<T>();
+                list = rows.ToList<T>();
+            }
+            list.AddRange(models);
+            using(var writer = new StreamWriter(name+".csv"))
             using(var csvWriter = new CsvWriter(writer, csvConfig))
             {
                 csvWriter.Context.RegisterClassMap<TMap>();
-                await csvWriter.WriteRecordsAsync(models);
+                await csvWriter.WriteRecordsAsync(list);
                 await writer.FlushAsync();
             }
         }
