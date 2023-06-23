@@ -58,5 +58,23 @@ namespace parser
             }
 
         }
+
+        public async Task csvAppend<T, TMap>(string name, List<T> models)
+                                    where TMap : ClassMap<T>
+        {
+            var csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture)
+            {
+                Delimiter = " ;"
+            };
+
+           
+            using(var writer = new StreamWriter(name+".csv", true))
+            using(var csvWriter = new CsvWriter(writer, csvConfig))
+            {
+                csvWriter.Context.RegisterClassMap<TMap>();
+                await csvWriter.WriteRecordsAsync(models);
+                await writer.FlushAsync();
+            }
+        }
     }
 }

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\1dang\\YandexDisk\\ideas\\c#\\parsing\\parser\\parser.csproj": {}
+    "C:\\Users\\1dang\\Desktop\\parser\\parser.csproj": {}
   },
   "projects": {
-    "C:\\Users\\1dang\\YandexDisk\\ideas\\c#\\parsing\\parser\\parser.csproj": {
+    "C:\\Users\\1dang\\Desktop\\parser\\parser.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\1dang\\YandexDisk\\ideas\\c#\\parsing\\parser\\parser.csproj",
+        "projectUniqueName": "C:\\Users\\1dang\\Desktop\\parser\\parser.csproj",
         "projectName": "parser",
-        "projectPath": "C:\\Users\\1dang\\YandexDisk\\ideas\\c#\\parsing\\parser\\parser.csproj",
+        "projectPath": "C:\\Users\\1dang\\Desktop\\parser\\parser.csproj",
         "packagesPath": "C:\\Users\\1dang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\1dang\\YandexDisk\\ideas\\c#\\parsing\\parser\\obj\\",
+        "outputPath": "C:\\Users\\1dang\\Desktop\\parser\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\1dang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -69,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

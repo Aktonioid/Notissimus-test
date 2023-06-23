@@ -10,22 +10,24 @@ using System.Diagnostics;
 ParseByCity city= new();
 ParseBase parseBase = new();
 
+// // // // // // // // await parseBase.csvWrite<ProductModel, ProductMap>(new List<ProductModel>(), "Result");
 
 // Парсинг для москвы
-var swM = new Stopwatch();
-swM.Start();
-var list = city.parseByPages("77000000000").GetAwaiter().GetResult();
-swM.Stop();
-Console.WriteLine(swM.Elapsed);
-await parseBase.csvWrite<ProductModel, ProductMap>(list, "Moscow");
-//
+// var swM = new Stopwatch();
+// swM.Start();
+// var list = await city.parseByPages("77000000000");
+// swM.Stop();
+// Console.WriteLine(swM.Elapsed);
+// await parseBase.csvAppend<ProductModel, ProductMap>("Result", list);
+// //
 
 //парсинг для ростова
 var swR = new Stopwatch();
 swR.Start();
-var listR = city.parseByPages("61000001000").GetAwaiter().GetResult();
+var listR = await city.parseByPages("61000001000");
 swR.Stop();
-await parseBase.csvWrite<ProductModel, ProductMap>(listR, "Rostow");
+Console.WriteLine("Rostov parse time "+swR.Elapsed);
+await parseBase.csvAppend<ProductModel, ProductMap>("Result",listR);
 
 // // Console.WriteLine("Moscow parse time " + swM.Elapsed);
-Console.WriteLine("Rostov parse time "+swR.Elapsed);
+
